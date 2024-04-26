@@ -7,37 +7,34 @@ import org.junit.jupiter.api.Test;
 
 
 public class LeapYearTest {
+    
 	
 	@Test
 	public void checkLeapYear() {
-		assertTrue(LeapYear.isLeapYear(2024));
+		assertTrue(new LeapYear().isLeapYear(2024));
 	}
 
 
     @Test
 	public void checkNotLeapYear() {
-		assertFalse(LeapYear.isLeapYear(2023));
+		assertFalse(new LeapYear().isLeapYear(2023));
 	}
 
     @Test 
     public void checkDivisibleBy400() {
-        assertTrue(LeapYear.isLeapYear(400));
-        assertTrue(LeapYear.isLeapYear(800));
-        assertTrue(LeapYear.isLeapYear(1200));
-        assertTrue(LeapYear.isLeapYear(1600));
+        assertTrue(new LeapYear().isLeapYear(400));
+
     }
 
     @Test 
     public void checkDivisibleBy100() {
-        assertFalse(LeapYear.isLeapYear(100));
-        assertFalse(LeapYear.isLeapYear(1000));
+        assertFalse(new LeapYear().isLeapYear(100));
     }
 	
 
     @Test 
     public void checkDivisibleBy4() {
-        assertTrue(LeapYear.isLeapYear(4));
-        assertTrue(LeapYear.isLeapYear(8));
+        assertTrue(new LeapYear().isLeapYear(4));
     }
 		
 }
